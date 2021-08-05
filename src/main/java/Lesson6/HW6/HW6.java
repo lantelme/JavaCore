@@ -12,7 +12,7 @@ public class HW6 {
                 .scheme("https")
                 .host("api.weather.yandex.ru")
                 .addPathSegment("/v2")
-                .addPathSegment("/forecast?")
+                .addPathSegment("/forecast")
                 .build();
 
         String authBody = "{\n" +
