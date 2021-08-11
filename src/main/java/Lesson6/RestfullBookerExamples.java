@@ -4,6 +4,8 @@ import okhttp3.*;
 
 import java.io.IOException;
 
+import static okhttp3.RequestBody.*;
+
 public class RestfullBookerExamples {
     public static void main(String[] args) throws IOException {
         OkHttpClient okHttpClient = new OkHttpClient();
@@ -18,12 +20,12 @@ public class RestfullBookerExamples {
                 "    \"password\" : \"password123\"\n" +
                 "}";
 
-        RequestBody requestAuthBody = RequestBody.create(authBody, MediaType.parse("JSON"));
+     //   RequestBody requestAuthBody = RequestBody.create(authBody, MediaType.parse("JSON"));
 
         Request requestAuth = new Request.Builder()
                 .url(httpUrl)
                 .addHeader("Content-Type", "application/json")
-                .post(requestAuthBody)
+             //   .post(requestAuthBody)
                 .build();
 
         Response responseAuth = okHttpClient.newCall(requestAuth).execute();
@@ -55,7 +57,7 @@ public class RestfullBookerExamples {
                 "    \"additionalneeds\" : \"Breakfast\"\n" +
                 "}";
 
-        RequestBody requestCreateBookingBody = RequestBody.create(createBookingJson,MediaType.parse("JSON"));
+        RequestBody requestCreateBookingBody = create(createBookingJson,MediaType.parse("JSON"));
 
 
         Request requestCreateBooking = new Request.Builder()
