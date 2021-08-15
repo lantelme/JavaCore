@@ -24,7 +24,7 @@ public class HW6 {
                 "    \"extra\" : true,\n" +
                 "}";
 
-        RequestBody requestAuthBody = RequestBody.create(authBody, MediaType.parse("JSON"));
+     //  RequestBody requestAuthBody = RequestBody.create(authBody, MediaType.parse("JSON"));
 
         Request requestAuth = new Request.Builder()
                 .url("https://api.weather.yandex.ru/v2/forecast/")
@@ -50,7 +50,7 @@ public class HW6 {
                 "    \"forecasts\" : {\n" +
                 "}";
 
-        RequestBody requestCreateBookingBody = RequestBody.create(createBookingJson, MediaType.parse("JSON"));
+     //   RequestBody requestCreateBookingBody = RequestBody.create(createBookingJson, MediaType.parse("JSON"));
 
 
         Request requestCreateBooking = new Request.Builder()
